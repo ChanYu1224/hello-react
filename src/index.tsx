@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import Top from "./pages/Top";
 import Counter from "./pages/Counter";
+import Detail from "./pages/Detail";
 
 
 const router = createBrowserRouter([
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
         path: "counter",
         element: <Counter/>,
     },
+    {
+        path: "pages/:id",
+        element: <Detail/>,
+    }
 ]);
 
 

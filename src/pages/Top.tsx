@@ -1,9 +1,14 @@
 import React from "react";
 import Hello from "../components/Hello";
 
+import { Link } from "react-router-dom";
 
-export default function App() {
-    return <Hello name="world"/>;
-    // equal to...
-    // return Hello({ name: "world" });
+
+export default function Top() {
+    return (
+        <>
+            <Hello name="world"/>
+            <Link to="/counter">カウンターページへ</Link>
+        </>
+    )
 }
