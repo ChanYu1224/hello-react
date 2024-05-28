@@ -3,13 +3,18 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import Top from "./pages/Top";
+import Counter from "./pages/Counter";
 
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Top/>,
-    }
+    },
+    {
+        path: "counter",
+        element: <Counter/>,
+    },
 ]);
 
 
