@@ -1,10 +1,11 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import Top from "./pages/Top";
 import Counter from "./pages/Counter";
 import Detail from "./pages/Detail";
+import UserProvider from "./providers/UserProvider";
 
 
 const router = createBrowserRouter([
@@ -25,4 +26,10 @@ const router = createBrowserRouter([
 
 const container = document.getElementById("root");
 const root = createRoot(container);
-root.render(<RouterProvider router={router}/>);
+root.render(
+    <StrictMode>
+        <UserProvider>
+            <RouterProvider router={router}/>
+        </UserProvider>
+    </StrictMode>
+);

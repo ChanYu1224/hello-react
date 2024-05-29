@@ -1,5 +1,12 @@
 import React from "react";
+import { useUser } from "../providers/UserProvider";
 
-export default function Hello(props: { name: string }) {
-    return <div>Hello, {props.name}.</div>;
+export default function Hello() {
+    const { name } = useUser();
+    return (
+        <div>
+            Hello, {name}
+            {name && "."}
+        </div>
+    );
 };
